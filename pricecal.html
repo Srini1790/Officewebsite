@@ -1,0 +1,151 @@
+<html>
+<head> 
+<title>Price Calculator</title>
+<link rel="icon" href="ness.jpg" type="image/icon type">
+<style>
+div#fixedheader {
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	color:white;
+	background:red;
+	padding:14px;
+	text-align: center;
+	font-size: 24px;
+	}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 18px;
+  text-decoration: none;
+  font-size: 21px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+  
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+pre {
+		font-family: calibri;
+		font-size: 15px;
+		color: 334BFF;
+	}
+</style>
+
+</head>
+<body bgcolor="#FFCD33">
+<script type="text/javascript">
+function salary()
+{
+	Basi = Number(document.my_cal.Basicsal.value);
+	EPF1 = Number(document.my_cal.ESI.value);
+	ESI1 = Number(document.my_cal.EPF.value);
+	SC1 = Number(document.my_cal.SC.value);
+	Total = Basi + EPF1 + ESI1 + SC1;
+	document.my_cal.Total.value = Total;
+}
+function gst()
+{
+	Basi = Number(document.my_cal.Basicsal.value);
+	Nos1 = Number(document.my_cal.Nos.value);
+	ESI2 = Number(document.my_cal.ESI.value);
+	EPF2 = Number(document.my_cal.EPF.value);
+	GST1 = Number(document.my_cal.GST.value);
+	SC2 = Number(document.my_cal.SC.value);
+	Tot = Basi + ESI2 + EPF2 + SC2;
+	Total1 = Tot * Nos1;
+	document.my_cal.Total3.value = Total1
+	Tota = Total1 * GST1;
+	document.my_cal.srini.value = Tota;
+	Gtot= Total1 + Tota;
+	document.my_cal.Total.value = Gtot;
+	
+}
+function quotation()
+{
+	Basi1 = Number(document.my_cal.Basicsal.value);
+	Nos2 = Number(document.my_cal.Nos.value);
+	ESI3 = Number(document.my_cal.ESI.value);
+	EPF3 = Number(document.my_cal.EPF.value);
+	GST2 = Number(document.my_cal.GST.value);
+	SC3 = Number(document.my_cal.SC.value);
+	Tot1 = Basi1 + ESI3 + EPF3 + SC3;
+	Total2 = Tot1 * Nos2;
+	document.my_cal.Total3.value = Total2;
+	Tota2 = Total2 * GST2;
+	document.my_cal.srini.value = Tota2;
+	Total3 = Total2 + Tota2
+	Total4 = Total3 - (Total3 * 0.15)
+	document.my_cal.Total.value = Total4;
+}
+</script>
+<div id="fixedheader">NIGHT EYE SECURITY SERVICES </div>
+<br>
+<br>
+<br>
+<div class="topnav">
+  <a href="main.html">Home Page</a>
+  <a href="servicelist.html">Services Offered</a>
+  <a href="pricelist.html">Pricing</a>
+  <a href="pricecal.html">Price Calculator</a>
+  <a href="profile.html">Company Profile</a>
+  <a href="customer1.html">Our Customers</a>
+  <a href="applnform.html">Apply Job</a>
+  <a href="contactus.html">Contact Us</a>
+</div>
+<h2 style="color: 334BFF;"><center><u> Price - Calculator </u></center></h2>
+<form name="my_cal" style="color: 334BFF;">
+<b>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspBasicsal: <input type="text" name="Basicsal" placeholder="Enter the Basic Salary"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNos: <input type="text" name="Nos" placeholder="Enter the No. of Employees "> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ESI: <input type="text" name="ESI" placeholder="Enter the ESI Amount">
+<br>
+<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp EPF: <input type="text" name="EPF" placeholder="Enter the EFP Amount">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp S.C: <input type="text" name="SC" placeholder="Enter the Service Charges ">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp GST: <input type="text" name="GST" placeholder="Enter the GST in decimals">
+<br>
+<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Total Before GST : <input type="text" name="Total3" placeholder="Total Salary is">  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp GST Amount: <input type="text" name="srini" placeholder="GST Amount">  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Total: <input type="text" name="Total" placeholder="Total Salary is">
+<br>
+<br>
+</b>
+<br>
+<div align="center">
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="button" value="SALARY" onclick="salary()"> 
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="button" value="GST" onclick="gst()"> 
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="button" value="QUOTATION" onclick="quotation()">
+</div>
+</form>
+<pre>
+<h2><u><center>Instructions to use Calculator:</center></u></h2>
+				<b>	1. Service Charge(S.C) is 5000/month as on 30/04/2020.Change in the amount of Input is allowed.
+					2. Good and Service Tax (GST) is 18% as on 30/04/2020. 
+					     To input any other values ex; 12% should be given as 0.12 as the GST input.
+					3. For Salary : Provide Basic Salary, ESI,EPF and click on the salary to see the salary per month. 
+					4. For Quotaion: Provide Basic Salary, ESI,EPF,Nos and click on the quotation tab where the price is with flat 15% of discount to the Buyers.
+					5. For GST : Provide Basic Salary, ESI,EPF,Nos and click on the GST tab where the price before GST and the GST will be displayed to the customers. </b>
+</pre>
+<div class="footer">
+<p> &copy2020 NIGHT EYE SECURITY SERVICES &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 	                                                                                     Designed by: Srinivasa Technologies PVT.LTD.</p>
+</div>
+</body> 
+</html>
